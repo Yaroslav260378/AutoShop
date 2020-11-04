@@ -1,0 +1,27 @@
+@startuml
+
+abstract class Vehicle {
+    -String name;
+    -String color;
+    - int year;
+    - double price;
+    - int number_of_wheels;
+    - int max_speed;
+
+
+    +setName(String name)
+    +String getName()
+    +setColor(String color)
+    + String getColor()
+    + void setYear(int year)
+    + int getYear()
+    + void setPrice(double price)
+    + double getPrice()
+    + void setNumber_of_wheels(int number_of_wheels)
+    + int getNumber_of_wheels()
+    + void setMax_speed(int max_speed)
+    + int getMax_speed()
+    + showVehicle();
+}
+
+@enduml

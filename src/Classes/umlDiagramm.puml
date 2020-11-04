@@ -1,0 +1,47 @@
+@startuml
+
++abstract class Vehicle {
+    #String name;
+    #String color;
+    #int year;
+    #double price;
+    #int number_of_wheels;
+    #int max_speed;
+    +abstract showVehicle();
+}
+
++abstract class Auto extends Vehicle {
+    # double engine_capacity;
+    # int engine_power;
+    # double fuel_consumption;
+    +abstract showVehicle();
+}
+
++class Bicycle extends Vehicle{
+    - int type_of_brakes;
+    - int type_of_bicycle;
+    + Bicycle(){}
+    + void showVehicle() {}
+}
+
++class Car extends Auto {
+    - char class_auto;
+    - int gear;
+    + Car(){}
+    + void showVehicle(){}
+}
+
++class Lorry extends Auto {
+    - int max_cargo_weight; //максимальный вес груза
+    - int number_of_trailers; //количество прицепов
+    + Lorry(){}
+    + void showVehicle() {}
+}
+
++class Garage {
+    - ArrayList<Vehicle> cars = new ArrayList<Vehicle>();
+    +void addToGarage(){}
+    +void showByIndex(){}
+}
+
+@enduml
